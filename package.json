@@ -37,9 +37,9 @@
     "knex": "^0.10.0",
     "mocha": "^2.4.5",
     "mongoose": "^4.4.10",
+    "pg": "^7.3.0",
     "request": "^2.34.0",
-    "sqlite3": "~3.1.1",
-    "pg": "6.x"
+    "sqlite3": "~3.1.1"
   },
   "devDependencies": {
     "supertest": "^1.2.0"

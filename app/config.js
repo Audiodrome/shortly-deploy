@@ -1,11 +1,10 @@
 var path = require('path');
+// var pg = require('pg');
+var dburl = 'postgres://ryriocrvhqrhsa:d9080bd2743d839c1a4788b339ce92104f9080e799c507a9ae358e2d86b049b9@ec2-23-23-221-255.compute-1.amazonaws.com:5432/d5kvblb7jtshq2';
 var knex = require('knex')({
   client: 'pg',
-  connection: {
-    // filename: path.join(__dirname, '../db/shortly.sqlite')
-    connection: process.env.DATABASE_URL + `?ssl=true`,
-  },
-  useNullAsDefault: true
+  connection: dburl + '?ssl=true',
+  searchPath: 'knex,public'
 });
 var db = require('bookshelf')(knex);
 
