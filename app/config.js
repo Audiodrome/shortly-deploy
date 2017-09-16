@@ -1,8 +1,9 @@
 var path = require('path');
 var knex = require('knex')({
-  client: 'sqlite3',
+  client: 'pg',
   connection: {
-    filename: path.join(__dirname, '../db/shortly.sqlite')
+    // filename: path.join(__dirname, '../db/shortly.sqlite')
+    connection: process.env.DATABASE_URL + `?ssl=true`,
   },
   useNullAsDefault: true
 });
